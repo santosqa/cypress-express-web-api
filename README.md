@@ -118,7 +118,7 @@ git init
 
 ---
 
-> 🔥  Dica 1
+> 🔥  Dica 1  
 > No Arquivo .gitignored, o padrão `**/` significa "em qualquer nível de diretório". Isso garante que os diretórios e arquivos sejam ignorados em qualquer lugar do projeto, não apenas na raiz. Exemplo:  `**/node_modules/`  em qualquer lugar do projeto que existir a pasta node_modules, será ignorado ao enviar para o repositório remoto.
 
 
