@@ -111,12 +111,12 @@ git checkout nome_da_branch_desejada
 - 3 - Instale as dependencias | ``` npm install``` 
 - 4 - Inicie o banco de dados | ```npm run db:init``` 
 - 5 - Inicie a api | ```npm run dev``` 
-	-  6. Caso ocorra erro sqlite3
-		- 6.1 - Verifique a versão do node | ```node -v``` 
-    - 6.2 - Use a versão 18 | ```nvm use 18``` 
-		- 6.3 - Verifique a versão do módulo | ```npm list better-sqlite3```  
-		- 6.4 - Recompile o módulo | ``` npm rebuild better-sqlite3 ``` 
-		- 6.5 - Atualize o módulo se necessário | ```npm install better-sqlite3@latest```
+- 6 - Caso ocorra erro sqlite3
+  - 6.1 - Verifique a versão do node | ```node -v``` 
+  - 6.2 - Use a versão 18 | ```nvm use 18``` 
+  - 6.3 - Verifique a versão do módulo | ```npm list better-sqlite3```  
+  - 6.4 - Recompile o módulo | ``` npm rebuild better-sqlite3 ``` 
+  - 6.5 - Atualize o módulo se necessário | ```npm install better-sqlite3@latest```
 
 ##### Dentro da pasta WEB
 - 1 - Instale as dependencias | ```npm install``` 
