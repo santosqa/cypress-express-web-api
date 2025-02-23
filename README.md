@@ -49,6 +49,13 @@ Com Cypress, é possível realizar testes end-to-end de forma eficiente e simple
 </div>
 
 
+---
+## ⭐️ Deixe uma estrela para apoiar o projeto 👍🏽
+
+<p align="center">
+  <img alt="Imagem print da pagina principal do projeto contendo duas setas para mostrar a opção de apoiar clicando no ícone de estrela no github" src="./assets/apoie-o-projeto.png" width="100%">
+</p>
+
 
 ----------------------
 
@@ -85,6 +92,17 @@ rm -rf .git
 - Iniciar um novo repositorio Git: 
 ```bash 
 git init
+```
+
+##### Comandos Adicionais para o Git:
+
+- Criar e mudar para uma nova branch: 
+```bash 
+git checkout -b nome_da_branch_desejada
+```
+- Mudar para uma branch existente: 
+```bash 
+git checkout nome_da_branch_desejada
 ```
 ----------------------
 
