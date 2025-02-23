@@ -64,11 +64,7 @@ Com Cypress, é possível realizar testes end-to-end de forma eficiente e simple
   - yarn: https://yarnpkg.com/
   - package cypress yarn: https://yarnpkg.com/package?q=cypress&name=cypress
   - github cypress: https://github.com/cypress-io/cypress
-
-
-----------------------
-
-## DOC Cypress 
+  - FakerJs (simulador de dados): https://fakerjs.dev/
   - Viewport: https://docs.cypress.io/api/commands/viewport
   - Hooks BeforeEach: https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks
 
@@ -89,13 +85,13 @@ git clone https://github.com/santosqa/cypress-express-web-api.git
 ```bash 
 rm -rf .git 
 ```
+
+##### Comandos Adicionais para o Git:
+
 - Iniciar um novo repositorio Git: 
 ```bash 
 git init
 ```
-
-##### Comandos Adicionais para o Git:
-
 - Criar e mudar para uma nova branch: 
 ```bash 
 git checkout -b nome_da_branch_desejada
@@ -113,24 +109,34 @@ git checkout nome_da_branch_desejada
 - 1 - Instale o nvm | ```nvm install 18``` (caso já tenha, pule este passo)
 - 2 - Use a versão 18 | ```nvm use 18```  (caso já esteja usando, pule este passo)
 - 3 - Instale as dependencias | ``` npm install``` 
-- 4 - inicie o banco de dados | ```npm run db:init``` 
-- 5 - inicie a api | ```npm run dev``` 
+- 4 - Inicie o banco de dados | ```npm run db:init``` 
+- 5 - Inicie a api | ```npm run dev``` 
 	-  6. Caso ocorra erro sqlite3
-		- 6.1 - Verifique a versão do node | ```node -v``` (precisa ser o 18)
-		- 6.2 - Verifique a versão do módulo | ```npm list better-sqlite3```  
-		- 6.3 - Recompile o módulo | ``` npm rebuild better-sqlite3 ``` 
-		- 6.4 - Atualize o módulo se necessário | ```npm install better-sqlite3@latest```
+		- 6.1 - Verifique a versão do node | ```node -v``` 
+    - 6.2 - Use a versão 18 | ```nvm use 18``` 
+		- 6.3 - Verifique a versão do módulo | ```npm list better-sqlite3```  
+		- 6.4 - Recompile o módulo | ``` npm rebuild better-sqlite3 ``` 
+		- 6.5 - Atualize o módulo se necessário | ```npm install better-sqlite3@latest```
 
 ##### Dentro da pasta WEB
 - 1 - Instale as dependencias | ```npm install``` 
-- 2 - inicie a Aplicação WEb |  ```npm run dev``` 
+- 2 - Inicie a Aplicação WEb |  ```npm run dev``` 
 - 3 - Url da aplicação | lcoalhost:3000 
 
 ##### Dentro da pasta test
 - 1 - Ativar core pack | ```sudo corepack enable```  (caso já tenha aitivo, pule este passo)
-- 2 - iniciar o projeto | ```yarn init``` 
-- 3 - instalar cypress | ``` yarn add cypress@12.2.0 -D ``` 
-- 4 - abrir cypress | ```cypress open```
+- 2 - Iniciar o projeto | ```yarn init``` 
+- 3 - Instalar cypress | ``` yarn add cypress@12.2.0 -D ``` 
+- 4 - Abrir cypress | ```cypress open```
+- 5 - Instalar lib faker-js | ```yarn add @faker-js/faker --dev``` (Se desejar usar faker para criar dados)
+
+##### Comando extra caso precisar
+- 1 - Parar todos os processos do Node.js | ```pkill node``` ou ```pkill -f "node"``` (f é para forçar o encerramento)
+- 2 - Listar processo usando a porta 3000 | ```lsof -i :3000``` (Irá aparecer algo como; "node 99901 santosqa" o 99901 é o PID)
+- 3 - Use o comando kill -9 passado o PID para forçar o encerramento | ```kill -9 99901```
+- 4 - Listar processos com do db:init | ```ps aux | grep db:init``` (para matar faça o passo 3)
+- 5 - Se houver processos relacionados ao db:init, você pode matá-los em massa usando: ```pkill -f "db:init"```
+- 6 - 
 
 ###
 
