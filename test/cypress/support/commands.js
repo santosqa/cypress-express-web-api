@@ -23,3 +23,29 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+const hostApi = "http://localhost:3333";
+class Api {
+  deleteTasks(nameTask) {
+    cy.request({
+      url: hostApi + '/helper/tasks',
+      method: 'DELETE',
+      body: { name: nameTask}
+    }).then((res) => {
+      expect(res.status).to.eq(204);
+    });
+  }
+
+  postTasks(nameTask) {
+    cy.request({
+      url: hostApi + '/tasks',
+      method: 'POST',
+      body: { name: nameTask, is_done: false }
+    }).then((res) => {
+      expect(res.status).to.eq(201);
+    });
+  }
+
+}
+
+
+export const api = new Api();
